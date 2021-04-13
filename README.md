@@ -10,7 +10,7 @@ To run code:
 ```python launcher.py run -e 001EX --run-id 0```
 (this will run the first simulation in configuration 001EX as defined in config.py)
 
-Each competition instance should take between a few minutes and an hour on a single core and use less than 10 GB of memory. It is recommended to run them in parallel. Each simulation outputs some pickle files that can be loaded into memory using the routines in analysis/analysis_utils.py (see analysis/config_loading_example.ipynb for an example).
+Each competition instance should take between a few minutes to an hour on a single core and use less than 10 GB of memory. It is recommended to run them in parallel. Each simulation outputs some pickle files that can be loaded into memory using the routines in analysis/analysis_utils.py (see analysis/config_loading_example.ipynb for an example).
 
 Requirements found in requirements.txt containts the exact python environment used (not every library is strictly necessary). 
 
