@@ -8,8 +8,6 @@ import pickle
 import copy
 
 def config006EX():
-    '''
-    '''
     #EXP CONFIGS
     exp = dict()
     exp['expno'] = '006EX'
@@ -50,11 +48,6 @@ def config006EX():
 
 
 def config005EX():
-    '''
-    EXP NO. 005EX
-    Hyp: nn w adult
-    official 
-    '''
     #EXP CONFIGS
     exp = dict()
     exp['expno'] = '005EX'
@@ -95,12 +88,6 @@ def config005EX():
 
 
 def config004EX():
-    '''
-    EXP NO. 004EX
-    Hyp: Run experiment with F-MNIST with 3 random seeds
-    Easier to rerun this with update spec-logging
-    NN on fmnist off
-    '''
     #EXP CONFIGS
     exp = dict()
     exp['expno'] = '004EX'
@@ -141,10 +128,6 @@ def config004EX():
 
 
 def config003EX():
-    '''
-    EXP NO. 003EX
-    Hyp: MLP layer  w Postures
-    '''
     #EXP CONFIGS
     exp = dict()
     exp['expno'] = '003EX'
@@ -189,10 +172,6 @@ def config003EX():
 
 
 def config002EX():
-    '''
-    EXP NO. 002EX
-    Hyp: MLP  w adult
-    '''
     #EXP CONFIGS
     exp = dict()
     exp['expno'] = '002EX'
@@ -236,11 +215,6 @@ def config002EX():
 
 
 def config001EX():
-    '''
-    EXP NO. 001EX
-    Hyp: Run experiment with FMNIST with 3 random seeds
-    USE MLP
-    '''
     #EXP CONFIGS
     exp = dict()
     exp['expno'] = '001EX'
