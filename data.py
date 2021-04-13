@@ -156,52 +156,6 @@ def fashion_mnist(path='/home/'):
         transform=torchvision.transforms.ToTensor())
 
 
-class RoadNetworkDataset(Dataset):
-    """Road Network Dataset."""
-
-    def __init__(self, csv_file='path_goes_here',
-                remove_rid = True,
-                 transform=None):
-        """
-        Args: 
-            csv_file (string): Path to the csv file with annotations.
-            remove_rid (boolean): Remove road ids as a feature
-            transform (callable, optional): Optional transform to be applied
-                on a sample.
-        """
-        self.features = pd.read_csv(csv_file)
-        self.remove_rid = remove_rid
-        self.transform = transform
-        if self.remove_rid:
-            self.features = self.features.iloc[:,1:]
-
-    def __len__(self):
-        return len(self.features)
-
-    def __getitem__(self, idx):
-        """ 
-        Args:
-            idx: scalar index at dataset (int). 
-        Returns:
-            A transformed sample for features and elevation label.
-            Features are shape (batch, 1, 2), elevation labels are (batch,1,1).
-        """
-
-        if torch.is_tensor(idx):
-            idx = idx.tolist()
-        n_features = self.features.shape[1]
-        features = self.features.iloc[idx, :n_features-1]
-        features = np.array(features)
-        features = features.astype('float').reshape(-1, n_features-1)
-        label = np.array(self.features.iloc[idx, n_features-1:]).reshape(-1, 1)
-        sample = {'features': features, 'label': label}
-
-        if self.transform:
-            sample = self.transform(sample)
-
-        return sample['features'], sample['label']
-
-
 class healthDataset(Dataset):
     """Health Datasets Preprocessing."""
 
